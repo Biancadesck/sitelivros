@@ -1,1 +1,372 @@
+:root {
+    --rosa-claro: #ffe9ef;
+    --rosa: #f45b9b;
+    --rosa-escuro: #df4788;
+    --branco: #fffafa;
+    --preto: #222222;
+}
 
+* {
+    box-sizing: border-box;
+    font-weight: 400;
+}
+
+body {
+    margin: 0;
+
+    min-height: 100vh;
+
+    background-color: var(--rosa-claro);
+
+    color: var(--preto);
+
+    font-family: Georgia, 'Times New Roman', serif;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* CABEÇALHO */
+
+.cabecalho {
+    background-color: var(--rosa);
+
+    height: 70px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-shrink: 0;
+}
+
+.cabecalho h1 {
+    margin: 0;
+
+    font-size: 30px;
+
+    font-weight: bold;
+}
+
+
+/* CONTEÚDO */
+
+.conteudo {
+    width: 100%;
+    max-width: 1050px;
+
+    margin: 0 auto;
+
+    padding: 32px 20px;
+
+    flex: 1;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 18px;
+}
+
+
+/* CARDS */
+
+.questionario,
+.livro-sugerido {
+
+    background-color: var(--branco);
+
+    width: 430px;
+
+    height: 320px;
+
+    border-radius: 22px;
+
+    padding: 15px 25px;
+
+    text-align: center;
+}
+
+
+/* TÍTULO DOS CARDS */
+
+.questionario h2,
+.livro-sugerido h2 {
+
+    font-family: Arial, sans-serif;
+
+    font-size: 16px;
+
+    margin: 0 0 15px;
+}
+
+
+/* INÍCIO */
+
+.inicio {
+
+    height: 245px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+}
+
+
+#iniciar {
+
+    background-color: var(--rosa);
+
+    color: black;
+
+    border: none;
+
+    border-radius: 12px;
+
+    padding: 14px 40px;
+
+    cursor: pointer;
+
+    font-size: 14px;
+}
+
+
+#iniciar:hover {
+
+    background-color: var(--rosa-escuro);
+}
+
+
+/* QUIZ */
+
+.quiz {
+
+    display: none;
+
+    text-align: left;
+
+    font-family: Arial, sans-serif;
+
+    padding: 15px 10px;
+}
+
+
+.quiz h3 {
+
+    font-size: 15px;
+
+    line-height: 1.4;
+
+    margin: 20px 0;
+}
+
+
+.respostas {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 13px;
+}
+
+
+.resposta {
+
+    background-color: transparent;
+
+    border: none;
+
+    text-align: left;
+
+    font-size: 14px;
+
+    padding: 5px;
+
+    cursor: pointer;
+}
+
+
+.resposta:hover {
+
+    color: var(--rosa-escuro);
+}
+
+
+/* RESULTADO */
+
+.resultado {
+
+    display: none;
+
+    text-align: center;
+
+    font-family: Arial, sans-serif;
+
+    padding: 35px 15px;
+}
+
+
+.resultado h3 {
+
+    font-size: 15px;
+
+    margin-bottom: 12px;
+}
+
+
+.resultado h2 {
+
+    color: var(--rosa-escuro);
+
+    font-size: 23px;
+
+    font-weight: bold;
+
+    margin: 12px 0;
+}
+
+
+.resultado p {
+
+    font-size: 14px;
+
+    line-height: 1.5;
+}
+
+
+/* LIVRO */
+
+.livro {
+
+    height: 235px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+.livro img {
+
+    width: 105px;
+
+    height: 150px;
+
+    object-fit: cover;
+
+    border-radius: 2px;
+}
+
+
+#nome-livro {
+
+    font-family: Arial, sans-serif;
+
+    font-size: 14px;
+
+    margin: 9px 0 3px;
+
+    font-weight: bold;
+}
+
+
+#autor-livro {
+
+    font-family: Arial, sans-serif;
+
+    font-size: 12px;
+
+    margin: 0;
+}
+
+
+/* BOTÃO SORTEAR */
+
+.sortear {
+
+    display: none;
+
+    margin: 0 auto;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 12px;
+
+    padding: 9px 20px;
+
+    background-color: var(--rosa);
+
+    color: black;
+
+    border: none;
+
+    border-radius: 12px;
+
+    cursor: pointer;
+}
+
+
+.sortear:hover {
+
+    background-color: var(--rosa-escuro);
+}
+
+
+/* RODAPÉ */
+
+.rodape {
+
+    width: 100%;
+
+    height: 30px;
+
+    background-color: var(--rosa);
+
+    flex-shrink: 0;
+}
+
+
+/* CELULAR */
+
+@media screen and (max-width: 750px) {
+
+    .conteudo {
+
+        flex-direction: column;
+
+        padding: 25px 15px;
+    }
+
+    .questionario,
+    .livro-sugerido {
+
+        width: 90%;
+
+        max-width: 430px;
+    }
+
+}
+
+
+@media screen and (max-width: 450px) {
+
+    .cabecalho h1 {
+
+        font-size: 25px;
+    }
+
+    .questionario,
+    .livro-sugerido {
+
+        height: 300px;
+    }
+
+}
