@@ -1,135 +1,378 @@
-<!DOCTYPE html> <html lang="pt-br">
+:root { --rosa-claro: #ffe9ef; --rosa: #f45b9b; --rosa-escuro: #df4788; --branco: #fffafa; --preto: #222222; --rosa-suave: #fff1f5; }
 
-<head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0">
+{
+box-sizing: border-box; font-weight: 400; }
 
-<title>Destino Literário</title>
+body { margin: 0; min-height: 100vh;
 
-<link rel="stylesheet" href="style.css"> </head>
+background-color: var(--rosa-claro); color: var(--preto);
 
-<body>
+font-family: Georgia, 'Times New Roman', serif;
 
-<header class="cabecalho"> <h1>Destino Literário</h1> </header>
+display: flex; flex-direction: column; }
 
-<main class="conteudo">
+/* ========================= CABEÇALHO ========================= */
 
-<!-- INTRODUÇÃO DO SITE -->
+.cabecalho { width: 100%; height: 70px;
 
-<section class="introducao">
+background-color: var(--rosa);
 
-<h2>Bem-vindo ao Destino Literário!</h2>
+display: flex; justify-content: center; align-items: center;
 
-<p> Descubra qual tipo de leitor combina mais com você. Responda ao questionário, descubra seu perfil literário e encontre uma sugestão de livro para sua próxima leitura. </p>
+flex-shrink: 0; }
 
-</section>
+.cabecalho h1 { margin: 0;
 
-<!-- CARDS PRINCIPAIS -->
+font-size: 30px; font-weight: bold; }
 
-<section class="cards-principais">
+/* ========================= CONTEÚDO PRINCIPAL ========================= */
 
-<!-- PRIMEIRO CARD: PERFIS -->
+.conteudo { width: 100%; max-width: 1100px;
 
-<section class="perfis">
+margin: 0 auto; padding: 35px 20px;
 
-<h2>Perfis de leitores</h2>
+flex: 1; }
 
-<div class="lista-perfis">
+/* ========================= INTRODUÇÃO ========================= */
 
-<div class="perfil-card">
+.introducao { width: 100%; max-width: 850px;
 
-<h3>♡ Leitor Romântico</h3>
+margin: 0 auto 30px;
 
-<p> Gosta de histórias de amor, sentimentos e relacionamentos marcantes. </p>
+text-align: center; }
 
-</div>
+.introducao h2 { margin: 0 0 12px;
 
-<div class="perfil-card">
+font-family: Arial, sans-serif; font-size: 22px; font-weight: bold;
 
-<h3>✦ Leitor Aventureiro</h3>
+color: var(--rosa-escuro); }
 
-<p> Prefere aventuras, mundos fantásticos e grandes desafios. </p>
+.introducao p { margin: 0 auto;
 
-</div>
+max-width: 750px;
 
-<div class="perfil-card">
+font-size: 15px; line-height: 1.6; }
 
-<h3>⌕ Leitor Misterioso</h3>
+/* ========================= CARDS PRINCIPAIS ========================= */
 
-<p> Adora pistas, segredos, investigações e histórias cheias de reviravoltas. </p>
+.cards-principais { width: 100%;
 
-</div>
+display: grid;
 
-</div>
+grid-template-columns: repeat(3, 1fr);
 
-</section>
+gap: 18px;
 
-<!-- SEGUNDO CARD: QUESTIONÁRIO -->
+align-items: stretch; }
 
-<section class="questionario">
+/* ========================= CARDS GERAIS ========================= */
 
-<h2>Questionário</h2>
+.perfis, .questionario, .livro-sugerido { background-color: var(--branco);
 
-<div class="inicio" id="inicio">
+min-height: 360px;
 
-<button id="iniciar"> INICIAR </button>
+border-radius: 22px;
 
-</div>
+padding: 22px;
 
-<div class="quiz" id="quiz">
+text-align: center;
 
-<h3 id="numero-pergunta"> 1. Pergunta... </h3>
+box-shadow: 0 4px 12px rgba(223, 71, 136, 0.08); }
 
-<div class="respostas">
+.perfis h2, .questionario h2, .livro-sugerido h2 { margin: 0 0 20px;
 
-<button class="resposta"></button>
+font-family: Arial, sans-serif;
 
-<button class="resposta"></button>
+font-size: 17px; font-weight: bold;
 
-<button class="resposta"></button>
+color: var(--preto); }
 
-</div>
+/* ========================= PERFIS DE LEITORES ========================= */
 
-</div>
+.lista-perfis { display: flex; flex-direction: column;
 
-<div class="resultado" id="resultado">
+gap: 12px; }
 
-<h3>Seu perfil é:</h3>
+.perfil-card { background-color: var(--rosa-suave);
 
-<h2 id="perfil"></h2>
+border-radius: 14px;
 
-<p id="descricao-perfil"></p>
+padding: 13px 15px;
 
-</div>
+text-align: left;
 
-</section>
+transition: 0.2s ease; }
 
-<!-- TERCEIRO CARD: LIVRO -->
+.perfil-card:hover { background-color: #ffe1eb;
 
-<section class="livro-sugerido">
+transform: translateY(-2px); }
 
-<h2>Livro sugerido</h2>
+.perfil-card h3 { margin: 0 0 7px;
 
-<div class="livro" id="livro">
+font-family: Arial, sans-serif;
 
-<img id="capa-livro" src="livro5.jpg" alt="Capa do livro" >
+font-size: 14px;
 
-<h3 id="nome-livro"></h3>
+font-weight: bold;
 
-<p id="autor-livro"></p>
+color: var(--rosa-escuro); }
 
-</div>
+.perfil-card p { margin: 0;
 
-<button class="sortear" id="sortear"> SORTEAR LIVRO </button>
+font-family: Arial, sans-serif;
 
-</section>
+font-size: 12px;
 
-</section>
+line-height: 1.45; }
 
-</main>
+/* ========================= QUESTIONÁRIO ========================= */
 
-<footer class="rodape"></footer>
+.questionario { display: flex; flex-direction: column; }
 
-<script src="main.js"></script>
+/* INÍCIO */
 
-</body>
+.inicio { flex: 1;
 
-</html>
+display: flex;
+
+justify-content: center; align-items: center; }
+
+#iniciar { background-color: var(--rosa);
+
+color: black;
+
+border: none;
+
+border-radius: 12px;
+
+padding: 14px 40px;
+
+cursor: pointer;
+
+font-family: Arial, sans-serif;
+
+font-size: 14px;
+
+transition: 0.2s ease; }
+
+#iniciar:hover { background-color: var(--rosa-escuro);
+
+transform: translateY(-2px); }
+
+/* ========================= QUIZ ========================= */
+
+.quiz { display: none;
+
+flex: 1;
+
+text-align: left;
+
+font-family: Arial, sans-serif;
+
+padding: 10px 5px; }
+
+.quiz h3 { margin: 25px 0;
+
+font-size: 15px;
+
+line-height: 1.5; }
+
+/* RESPOSTAS */
+
+.respostas { display: flex;
+
+flex-direction: column;
+
+gap: 13px; }
+
+.resposta { width: 100%;
+
+background-color: transparent;
+
+border: none;
+
+border-radius: 8px;
+
+text-align: left;
+
+font-family: Arial, sans-serif;
+
+font-size: 14px;
+
+line-height: 1.4;
+
+padding: 8px;
+
+cursor: pointer;
+
+transition: 0.2s ease; }
+
+.resposta:hover { background-color: var(--rosa-suave);
+
+color: var(--rosa-escuro);
+
+padding-left: 12px; }
+
+/* ========================= RESULTADO ========================= */
+
+.resultado { display: none;
+
+text-align: center;
+
+font-family: Arial, sans-serif;
+
+padding: 25px 10px; }
+
+.resultado h3 { margin: 5px 0 12px;
+
+font-size: 14px; }
+
+.resultado h2 { margin: 12px 0;
+
+color: var(--rosa-escuro);
+
+font-size: 22px;
+
+font-weight: bold; }
+
+.resultado p { margin: 0;
+
+font-size: 13px;
+
+line-height: 1.5; }
+
+/* ========================= LIVRO ========================= */
+
+.livro-sugerido { display: flex;
+
+flex-direction: column; }
+
+.livro { flex: 1;
+
+display: flex;
+
+flex-direction: column;
+
+align-items: center;
+
+justify-content: center; }
+
+.livro img { width: 105px; height: 150px;
+
+object-fit: cover;
+
+border-radius: 3px;
+
+box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12); }
+
+#nome-livro { margin: 10px 0 3px;
+
+font-family: Arial, sans-serif;
+
+font-size: 14px;
+
+font-weight: bold; }
+
+#autor-livro { margin: 0;
+
+font-family: Arial, sans-serif;
+
+font-size: 12px; }
+
+/* ========================= BOTÃO SORTEAR ========================= */
+
+.sortear { display: none;
+
+margin: 10px auto 0;
+
+font-family: Arial, sans-serif;
+
+font-size: 12px;
+
+padding: 9px 20px;
+
+background-color: var(--rosa);
+
+color: black;
+
+border: none;
+
+border-radius: 12px;
+
+cursor: pointer;
+
+transition: 0.2s ease; }
+
+.sortear:hover { background-color: var(--rosa-escuro);
+
+transform: translateY(-2px); }
+
+/* ========================= RODAPÉ ========================= */
+
+.rodape { width: 100%;
+
+height: 30px;
+
+background-color: var(--rosa);
+
+flex-shrink: 0; }
+
+/* ========================= TABLET ========================= */
+
+@media screen and (max-width: 850px) {
+
+.cards-principais { grid-template-columns: 1fr 1fr; }
+
+.perfis { grid-column: 1 / -1;
+
+min-height: auto; }
+
+.lista-perfis { display: grid;
+
+grid-template-columns: repeat(3, 1fr);
+
+gap: 12px; } }
+
+/* ========================= CELULAR ========================= */
+
+@media screen and (max-width: 600px) {
+
+.cabecalho { height: 65px; }
+
+.cabecalho h1 { font-size: 25px; }
+
+.conteudo { padding: 25px 15px; }
+
+.introducao { margin-bottom: 25px; }
+
+.introducao h2 { font-size: 19px; }
+
+.introducao p { font-size: 14px; }
+
+.cards-principais { display: flex;
+
+flex-direction: column;
+
+gap: 16px; }
+
+.perfis, .questionario, .livro-sugerido { width: 100%;
+
+min-height: 330px;
+
+padding: 20px; }
+
+.lista-perfis { display: flex;
+
+flex-direction: column; } }
+
+/* ========================= CELULARES PEQUENOS ========================= */
+
+@media screen and (max-width: 400px) {
+
+.cabecalho h1 { font-size: 23px; }
+
+.introducao h2 { font-size: 18px; }
+
+.perfis, .questionario, .livro-sugerido { padding: 18px; }
+
+.livro img { width: 95px; height: 140px; } }
