@@ -95,7 +95,7 @@ const perfis = [
         livros: [
 
             {
-                nome: 'Divine Rivals',
+                nome: 'Divinos Rivais',
                 autor: 'Rebecca Ross',
                 capa: src="book1.jpg"
             },
@@ -107,7 +107,7 @@ const perfis = [
             },
 
             {
-                nome: 'Better Than the Movies',
+                nome: 'Melhor do que nos filmes',
                 autor: 'Lynn Painter',
                 capa: src="book3.jpg"
             }
@@ -137,7 +137,7 @@ const perfis = [
             },
 
             {
-                nome: 'Once Upon a Broken Heart',
+                nome: 'Era uma vez um coração partido',
                 autor: 'Stephanie Garber',
                 capa: src="book5.jpg"
             }
@@ -155,19 +155,19 @@ const perfis = [
         livros: [
 
             {
-                nome: 'The Inheritance Games',
+                nome: 'Jogos de Herança',
                 autor: 'Jennifer Lynn Barnes',
                 capa: src="book6.jpg"
             },
 
             {
-                nome: 'A Good Girl’s Guide to Murder',
+                nome: 'Manual de assassinato para boas garotas',
                 autor: 'Holly Jackson',
                 capa: src="book7.jpg"
             },
 
             {
-                nome: 'The Reappearance of Rachel Price',
+                nome: 'O reaparecimento de Rachel Price',
                 autor: 'Holly Jackson',
                 capa: src="book8.jpg"
             }
