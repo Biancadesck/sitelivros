@@ -58,13 +58,146 @@ body {
 
     margin: 0 auto;
 
-    padding: 32px 20px;
+    padding: 35px 20px;
 
     flex: 1;
 
     display: flex;
+    flex-direction: column;
+
+    gap: 25px;
+}
+
+
+/* INTRODUÇÃO */
+
+.introducao {
+    background-color: var(--branco);
+
+    width: 100%;
+
+    border-radius: 22px;
+
+    padding: 25px 35px;
+
+    text-align: center;
+}
+
+.introducao h2 {
+    font-size: 22px;
+
+    margin: 0 0 12px;
+
+    font-weight: bold;
+}
+
+.introducao p {
+    max-width: 750px;
+
+    margin: 8px auto;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+
+/* TIPOS DE LEITORES */
+
+.tipos-leitores {
+    width: 100%;
+
+    text-align: center;
+}
+
+.tipos-leitores > h2 {
+    font-family: Arial, sans-serif;
+
+    font-size: 18px;
+
+    margin: 0 0 15px;
+
+    font-weight: bold;
+}
+
+
+/* CARDS DOS PERFIS */
+
+.cards-perfis {
+    display: flex;
 
     justify-content: center;
+
+    gap: 15px;
+}
+
+.card-perfil {
+    background-color: var(--branco);
+
+    flex: 1;
+
+    min-height: 190px;
+
+    padding: 20px 18px;
+
+    border-radius: 20px;
+
+    text-align: center;
+
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card-perfil:hover {
+    transform: translateY(-4px);
+
+    box-shadow: 0 6px 15px rgba(223, 71, 136, 0.15);
+}
+
+
+.icone-perfil {
+    color: var(--rosa-escuro);
+
+    font-size: 28px;
+
+    margin-bottom: 5px;
+}
+
+
+.card-perfil h3 {
+    font-family: Arial, sans-serif;
+
+    color: var(--rosa-escuro);
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    margin: 5px 0 10px;
+}
+
+
+.card-perfil p {
+    font-family: Arial, sans-serif;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+
+    margin: 0;
+}
+
+
+/* CARDS PRINCIPAIS */
+
+.cards-principais {
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+
     align-items: center;
 
     gap: 18px;
@@ -100,6 +233,8 @@ body {
     font-size: 16px;
 
     margin: 0 0 15px;
+
+    font-weight: bold;
 }
 
 
@@ -339,10 +474,19 @@ body {
 @media screen and (max-width: 750px) {
 
     .conteudo {
-
-        flex-direction: column;
-
         padding: 25px 15px;
+    }
+
+    .cards-perfis {
+        flex-direction: column;
+    }
+
+    .card-perfil {
+        width: 100%;
+    }
+
+    .cards-principais {
+        flex-direction: column;
     }
 
     .questionario,
@@ -352,7 +496,6 @@ body {
 
         max-width: 430px;
     }
-
 }
 
 
@@ -361,6 +504,14 @@ body {
     .cabecalho h1 {
 
         font-size: 25px;
+    }
+
+    .introducao {
+        padding: 22px 18px;
+    }
+
+    .introducao h2 {
+        font-size: 19px;
     }
 
     .questionario,
