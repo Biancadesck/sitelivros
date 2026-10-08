@@ -97,19 +97,19 @@ const perfis = [
             {
                 nome: 'Divinos Rivais',
                 autor: 'Rebecca Ross',
-                capa: src="book1.jpg"
+                capa: 'book1.jpg'
             },
 
             {
                 nome: 'Powerless',
                 autor: 'Lauren Roberts',
-                capa: src="book2.jpg"
+                capa: 'book2.jpg'
             },
 
             {
                 nome: 'Melhor do que nos filmes',
                 autor: 'Lynn Painter',
-                capa: src="book3.jpg"
+                capa: 'book3.jpg'
             }
 
         ]
@@ -127,19 +127,19 @@ const perfis = [
             {
                 nome: 'Powerless',
                 autor: 'Lauren Roberts',
-                capa: src="livro5.jpg"
+                capa: 'livro5.jpg'
             },
 
             {
                 nome: 'A Rainha Vermelha',
                 autor: 'Victoria Aveyard',
-                capa: src="book4.jpg"
+                capa: 'book4.jpg'
             },
 
             {
                 nome: 'Era uma vez um coração partido',
                 autor: 'Stephanie Garber',
-                capa: src="book5.jpg"
+                capa: 'book5.jpg'
             }
 
         ]
@@ -157,19 +157,19 @@ const perfis = [
             {
                 nome: 'Jogos de Herança',
                 autor: 'Jennifer Lynn Barnes',
-                capa: src="book6.jpg"
+                capa: 'book6.jpg'
             },
 
             {
                 nome: 'Manual de assassinato para boas garotas',
                 autor: 'Holly Jackson',
-                capa: src="book7.jpg"
+                capa: 'book7.jpg'
             },
 
             {
                 nome: 'O reaparecimento de Rachel Price',
                 autor: 'Holly Jackson',
-                capa: src="book8.jpg"
+                capa: 'book8.jpg'
             }
 
         ]
