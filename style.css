@@ -1,523 +1,389 @@
-:root {
-    --rosa-claro: #ffe9ef;
-    --rosa: #f45b9b;
-    --rosa-escuro: #df4788;
-    --branco: #fffafa;
-    --preto: #222222;
-}
+:root { --rosa-claro: #ffe9ef; --rosa: #f45b9b; --rosa-escuro: #df4788; --branco: #fffafa; --preto: #222222; }
 
-* {
-    box-sizing: border-box;
-    font-weight: 400;
-}
+{
 
-body {
-    margin: 0;
+box-sizing: border-box; font-weight: 400; }
 
-    min-height: 100vh;
+body { margin: 0;
 
-    background-color: var(--rosa-claro);
+min-height: 100vh;
 
-    color: var(--preto);
+background-color: var(--rosa-claro);
 
-    font-family: Georgia, 'Times New Roman', serif;
+color: var(--preto);
 
-    display: flex;
-    flex-direction: column;
-}
+font-family: Georgia, 'Times New Roman', serif;
 
+display: flex; flex-direction: column; }
 
 /* CABEÇALHO */
 
-.cabecalho {
-    background-color: var(--rosa);
+.cabecalho { background-color: var(--rosa);
 
-    height: 70px;
+height: 70px;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+display: flex; justify-content: center; align-items: center;
 
-    flex-shrink: 0;
-}
+flex-shrink: 0; }
 
-.cabecalho h1 {
-    margin: 0;
+.cabecalho h1 { margin: 0;
 
-    font-size: 30px;
+font-size: 30px;
 
-    font-weight: bold;
-}
-
+font-weight: bold; }
 
 /* CONTEÚDO */
 
-.conteudo {
-    width: 100%;
-    max-width: 1050px;
+.conteudo { width: 100%; max-width: 1150px;
 
-    margin: 0 auto;
+margin: 0 auto;
 
-    padding: 35px 20px;
+padding: 32px 20px;
 
-    flex: 1;
+flex: 1; }
 
-    display: flex;
-    flex-direction: column;
+/* INTRODUÇÃO DO SITE */
 
-    gap: 25px;
-}
+.introducao { width: 100%;
 
+background-color: var(--branco);
 
-/* INTRODUÇÃO */
+border-radius: 22px;
 
-.introducao {
-    background-color: var(--branco);
+padding: 20px 30px;
 
-    width: 100%;
+margin-bottom: 22px;
 
-    border-radius: 22px;
+text-align: center; }
 
-    padding: 25px 35px;
+.introducao h2 { margin: 0 0 10px;
 
-    text-align: center;
-}
+font-family: Arial, sans-serif;
 
-.introducao h2 {
-    font-size: 22px;
+font-size: 20px;
 
-    margin: 0 0 12px;
+font-weight: bold; }
 
-    font-weight: bold;
-}
+.introducao p { max-width: 800px;
 
-.introducao p {
-    max-width: 750px;
+margin: 0 auto;
 
-    margin: 8px auto;
+font-family: Arial, sans-serif;
 
-    font-family: Arial, sans-serif;
+font-size: 14px;
 
-    font-size: 14px;
+line-height: 1.5; }
 
-    line-height: 1.6;
-}
+/* TRÊS CARDS PRINCIPAIS */
 
+.cards-principais { width: 100%;
 
-/* TIPOS DE LEITORES */
+display: flex;
 
-.tipos-leitores {
-    width: 100%;
+justify-content: center;
 
-    text-align: center;
-}
+align-items: stretch;
 
-.tipos-leitores > h2 {
-    font-family: Arial, sans-serif;
-
-    font-size: 18px;
-
-    margin: 0 0 15px;
-
-    font-weight: bold;
-}
-
-
-/* CARDS DOS PERFIS */
-
-.cards-perfis {
-    display: flex;
-
-    justify-content: center;
-
-    gap: 15px;
-}
-
-.card-perfil {
-    background-color: var(--branco);
-
-    flex: 1;
-
-    min-height: 190px;
-
-    padding: 20px 18px;
-
-    border-radius: 20px;
-
-    text-align: center;
-
-    transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.card-perfil:hover {
-    transform: translateY(-4px);
-
-    box-shadow: 0 6px 15px rgba(223, 71, 136, 0.15);
-}
-
-
-.icone-perfil {
-    color: var(--rosa-escuro);
-
-    font-size: 28px;
-
-    margin-bottom: 5px;
-}
-
-
-.card-perfil h3 {
-    font-family: Arial, sans-serif;
-
-    color: var(--rosa-escuro);
-
-    font-size: 16px;
-
-    font-weight: bold;
-
-    margin: 5px 0 10px;
-}
-
-
-.card-perfil p {
-    font-family: Arial, sans-serif;
-
-    font-size: 13px;
-
-    line-height: 1.5;
-
-    margin: 0;
-}
-
-
-/* CARDS PRINCIPAIS */
-
-.cards-principais {
-    width: 100%;
-
-    display: flex;
-
-    justify-content: center;
-
-    align-items: center;
-
-    gap: 18px;
-}
-
+gap: 18px; }
 
 /* CARDS */
 
-.questionario,
-.livro-sugerido {
+.questionario, .perfis, .livro-sugerido {
 
-    background-color: var(--branco);
+background-color: var(--branco);
 
-    width: 430px;
+width: calc((100% - 36px) / 3);
 
-    height: 320px;
+height: 320px;
 
-    border-radius: 22px;
+border-radius: 22px;
 
-    padding: 15px 25px;
+padding: 15px 25px;
 
-    text-align: center;
-}
+text-align: center; }
 
+/* TÍTULOS DOS CARDS */
 
-/* TÍTULO DOS CARDS */
+.questionario h2, .perfis h2, .livro-sugerido h2 {
 
-.questionario h2,
-.livro-sugerido h2 {
+font-family: Arial, sans-serif;
 
-    font-family: Arial, sans-serif;
+font-size: 16px;
 
-    font-size: 16px;
+font-weight: bold;
 
-    margin: 0 0 15px;
+margin: 0 0 15px; }
 
-    font-weight: bold;
-}
-
-
-/* INÍCIO */
+/* INÍCIO DO QUESTIONÁRIO */
 
 .inicio {
 
-    height: 245px;
+height: 245px;
 
-    display: flex;
+display: flex;
 
-    justify-content: center;
-    align-items: center;
-}
+justify-content: center;
 
+align-items: center; }
 
 #iniciar {
 
-    background-color: var(--rosa);
+background-color: var(--rosa);
 
-    color: black;
+color: black;
 
-    border: none;
+border: none;
 
-    border-radius: 12px;
+border-radius: 12px;
 
-    padding: 14px 40px;
+padding: 14px 40px;
 
-    cursor: pointer;
+cursor: pointer;
 
-    font-size: 14px;
-}
-
+font-size: 14px; }
 
 #iniciar:hover {
 
-    background-color: var(--rosa-escuro);
-}
-
+background-color: var(--rosa-escuro); }
 
 /* QUIZ */
 
 .quiz {
 
-    display: none;
+display: none;
 
-    text-align: left;
+text-align: left;
 
-    font-family: Arial, sans-serif;
+font-family: Arial, sans-serif;
 
-    padding: 15px 10px;
-}
-
+padding: 15px 10px; }
 
 .quiz h3 {
 
-    font-size: 15px;
+font-size: 15px;
 
-    line-height: 1.4;
+line-height: 1.4;
 
-    margin: 20px 0;
-}
-
+margin: 20px 0; }
 
 .respostas {
 
-    display: flex;
+display: flex;
 
-    flex-direction: column;
+flex-direction: column;
 
-    gap: 13px;
-}
-
+gap: 13px; }
 
 .resposta {
 
-    background-color: transparent;
+background-color: transparent;
 
-    border: none;
+border: none;
 
-    text-align: left;
+text-align: left;
 
-    font-size: 14px;
+font-size: 14px;
 
-    padding: 5px;
+padding: 5px;
 
-    cursor: pointer;
-}
-
+cursor: pointer; }
 
 .resposta:hover {
 
-    color: var(--rosa-escuro);
-}
-
+color: var(--rosa-escuro); }
 
 /* RESULTADO */
 
 .resultado {
 
-    display: none;
+display: none;
 
-    text-align: center;
+text-align: center;
 
-    font-family: Arial, sans-serif;
+font-family: Arial, sans-serif;
 
-    padding: 35px 15px;
-}
-
+padding: 35px 15px; }
 
 .resultado h3 {
 
-    font-size: 15px;
+font-size: 15px;
 
-    margin-bottom: 12px;
-}
-
+margin-bottom: 12px; }
 
 .resultado h2 {
 
-    color: var(--rosa-escuro);
+color: var(--rosa-escuro);
 
-    font-size: 23px;
+font-size: 23px;
 
-    font-weight: bold;
+font-weight: bold;
 
-    margin: 12px 0;
-}
-
+margin: 12px 0; }
 
 .resultado p {
 
-    font-size: 14px;
+font-size: 14px;
 
-    line-height: 1.5;
-}
+line-height: 1.5; }
 
+/* CARD DOS PERFIS */
+
+.lista-perfis {
+
+height: 245px;
+
+display: flex;
+
+flex-direction: column;
+
+justify-content: center;
+
+gap: 17px; }
+
+.perfil-card {
+
+text-align: left;
+
+padding: 0 3px; }
+
+.perfil-card h3 {
+
+color: var(--rosa-escuro);
+
+font-family: Arial, sans-serif;
+
+font-size: 14px;
+
+font-weight: bold;
+
+margin: 0 0 5px; }
+
+.perfil-card p {
+
+font-family: Arial, sans-serif;
+
+font-size: 12px;
+
+line-height: 1.4;
+
+margin: 0; }
 
 /* LIVRO */
 
 .livro {
 
-    height: 235px;
+height: 235px;
 
-    display: flex;
+display: flex;
 
-    flex-direction: column;
+flex-direction: column;
 
-    align-items: center;
+align-items: center;
 
-    justify-content: center;
-}
-
+justify-content: center; }
 
 .livro img {
 
-    width: 105px;
+width: 105px;
 
-    height: 150px;
+height: 150px;
 
-    object-fit: cover;
+object-fit: cover;
 
-    border-radius: 2px;
-}
-
+border-radius: 2px; }
 
 #nome-livro {
 
-    font-family: Arial, sans-serif;
+font-family: Arial, sans-serif;
 
-    font-size: 14px;
+font-size: 14px;
 
-    margin: 9px 0 3px;
+margin: 9px 0 3px;
 
-    font-weight: bold;
-}
-
+font-weight: bold; }
 
 #autor-livro {
 
-    font-family: Arial, sans-serif;
+font-family: Arial, sans-serif;
 
-    font-size: 12px;
+font-size: 12px;
 
-    margin: 0;
-}
-
+margin: 0; }
 
 /* BOTÃO SORTEAR */
 
 .sortear {
 
-    display: none;
+display: none;
 
-    margin: 0 auto;
+margin: 0 auto;
 
-    font-family: Arial, sans-serif;
+font-family: Arial, sans-serif;
 
-    font-size: 12px;
+font-size: 12px;
 
-    padding: 9px 20px;
+padding: 9px 20px;
 
-    background-color: var(--rosa);
+background-color: var(--rosa);
 
-    color: black;
+color: black;
 
-    border: none;
+border: none;
 
-    border-radius: 12px;
+border-radius: 12px;
 
-    cursor: pointer;
-}
-
+cursor: pointer; }
 
 .sortear:hover {
 
-    background-color: var(--rosa-escuro);
-}
-
+background-color: var(--rosa-escuro); }
 
 /* RODAPÉ */
 
 .rodape {
 
-    width: 100%;
+width: 100%;
 
-    height: 30px;
+height: 30px;
 
-    background-color: var(--rosa);
+background-color: var(--rosa);
 
-    flex-shrink: 0;
+flex-shrink: 0; }
+
+/* TABLET / CELULAR */
+
+@media screen and (max-width: 900px) {
+
+.cards-principais {
+
+flex-direction: column;
+
+align-items: center; }
+
+.questionario, .perfis, .livro-sugerido {
+
+width: 90%;
+
+max-width: 430px; }
+
 }
-
-
-/* CELULAR */
-
-@media screen and (max-width: 750px) {
-
-    .conteudo {
-        padding: 25px 15px;
-    }
-
-    .cards-perfis {
-        flex-direction: column;
-    }
-
-    .card-perfil {
-        width: 100%;
-    }
-
-    .cards-principais {
-        flex-direction: column;
-    }
-
-    .questionario,
-    .livro-sugerido {
-
-        width: 90%;
-
-        max-width: 430px;
-    }
-}
-
 
 @media screen and (max-width: 450px) {
 
-    .cabecalho h1 {
+.cabecalho h1 {
 
-        font-size: 25px;
-    }
+font-size: 25px; }
 
-    .introducao {
-        padding: 22px 18px;
-    }
+.introducao {
 
-    .introducao h2 {
-        font-size: 19px;
-    }
+padding: 20px 18px; }
 
-    .questionario,
-    .livro-sugerido {
+.introducao h2 {
 
-        height: 300px;
-    }
+font-size: 19px; }
+
+.questionario, .perfis, .livro-sugerido {
+
+height: 300px; }
 
 }
