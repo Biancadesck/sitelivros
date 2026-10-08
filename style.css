@@ -1,389 +1,135 @@
-:root { --rosa-claro: #ffe9ef; --rosa: #f45b9b; --rosa-escuro: #df4788; --branco: #fffafa; --preto: #222222; }
+<!DOCTYPE html> <html lang="pt-br">
 
-{
+<head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-box-sizing: border-box; font-weight: 400; }
+<title>Destino Literário</title>
 
-body { margin: 0;
+<link rel="stylesheet" href="style.css"> </head>
 
-min-height: 100vh;
+<body>
 
-background-color: var(--rosa-claro);
+<header class="cabecalho"> <h1>Destino Literário</h1> </header>
 
-color: var(--preto);
+<main class="conteudo">
 
-font-family: Georgia, 'Times New Roman', serif;
+<!-- INTRODUÇÃO DO SITE -->
 
-display: flex; flex-direction: column; }
+<section class="introducao">
 
-/* CABEÇALHO */
+<h2>Bem-vindo ao Destino Literário!</h2>
 
-.cabecalho { background-color: var(--rosa);
+<p> Descubra qual tipo de leitor combina mais com você. Responda ao questionário, descubra seu perfil literário e encontre uma sugestão de livro para sua próxima leitura. </p>
 
-height: 70px;
+</section>
 
-display: flex; justify-content: center; align-items: center;
+<!-- CARDS PRINCIPAIS -->
 
-flex-shrink: 0; }
+<section class="cards-principais">
 
-.cabecalho h1 { margin: 0;
+<!-- PRIMEIRO CARD: PERFIS -->
 
-font-size: 30px;
+<section class="perfis">
 
-font-weight: bold; }
+<h2>Perfis de leitores</h2>
 
-/* CONTEÚDO */
+<div class="lista-perfis">
 
-.conteudo { width: 100%; max-width: 1150px;
+<div class="perfil-card">
 
-margin: 0 auto;
+<h3>♡ Leitor Romântico</h3>
 
-padding: 32px 20px;
+<p> Gosta de histórias de amor, sentimentos e relacionamentos marcantes. </p>
 
-flex: 1; }
+</div>
 
-/* INTRODUÇÃO DO SITE */
+<div class="perfil-card">
 
-.introducao { width: 100%;
+<h3>✦ Leitor Aventureiro</h3>
 
-background-color: var(--branco);
+<p> Prefere aventuras, mundos fantásticos e grandes desafios. </p>
 
-border-radius: 22px;
+</div>
 
-padding: 20px 30px;
+<div class="perfil-card">
 
-margin-bottom: 22px;
+<h3>⌕ Leitor Misterioso</h3>
 
-text-align: center; }
+<p> Adora pistas, segredos, investigações e histórias cheias de reviravoltas. </p>
 
-.introducao h2 { margin: 0 0 10px;
+</div>
 
-font-family: Arial, sans-serif;
+</div>
 
-font-size: 20px;
+</section>
 
-font-weight: bold; }
+<!-- SEGUNDO CARD: QUESTIONÁRIO -->
 
-.introducao p { max-width: 800px;
+<section class="questionario">
 
-margin: 0 auto;
+<h2>Questionário</h2>
 
-font-family: Arial, sans-serif;
+<div class="inicio" id="inicio">
 
-font-size: 14px;
+<button id="iniciar"> INICIAR </button>
 
-line-height: 1.5; }
+</div>
 
-/* TRÊS CARDS PRINCIPAIS */
+<div class="quiz" id="quiz">
 
-.cards-principais { width: 100%;
+<h3 id="numero-pergunta"> 1. Pergunta... </h3>
 
-display: flex;
+<div class="respostas">
 
-justify-content: center;
+<button class="resposta"></button>
 
-align-items: stretch;
+<button class="resposta"></button>
 
-gap: 18px; }
+<button class="resposta"></button>
 
-/* CARDS */
+</div>
 
-.questionario, .perfis, .livro-sugerido {
+</div>
 
-background-color: var(--branco);
+<div class="resultado" id="resultado">
 
-width: calc((100% - 36px) / 3);
+<h3>Seu perfil é:</h3>
 
-height: 320px;
+<h2 id="perfil"></h2>
 
-border-radius: 22px;
+<p id="descricao-perfil"></p>
 
-padding: 15px 25px;
+</div>
 
-text-align: center; }
+</section>
 
-/* TÍTULOS DOS CARDS */
+<!-- TERCEIRO CARD: LIVRO -->
 
-.questionario h2, .perfis h2, .livro-sugerido h2 {
+<section class="livro-sugerido">
 
-font-family: Arial, sans-serif;
+<h2>Livro sugerido</h2>
 
-font-size: 16px;
+<div class="livro" id="livro">
 
-font-weight: bold;
+<img id="capa-livro" src="livro5.jpg" alt="Capa do livro" >
 
-margin: 0 0 15px; }
+<h3 id="nome-livro"></h3>
 
-/* INÍCIO DO QUESTIONÁRIO */
+<p id="autor-livro"></p>
 
-.inicio {
+</div>
 
-height: 245px;
+<button class="sortear" id="sortear"> SORTEAR LIVRO </button>
 
-display: flex;
+</section>
 
-justify-content: center;
+</section>
 
-align-items: center; }
+</main>
 
-#iniciar {
+<footer class="rodape"></footer>
 
-background-color: var(--rosa);
+<script src="main.js"></script>
 
-color: black;
+</body>
 
-border: none;
-
-border-radius: 12px;
-
-padding: 14px 40px;
-
-cursor: pointer;
-
-font-size: 14px; }
-
-#iniciar:hover {
-
-background-color: var(--rosa-escuro); }
-
-/* QUIZ */
-
-.quiz {
-
-display: none;
-
-text-align: left;
-
-font-family: Arial, sans-serif;
-
-padding: 15px 10px; }
-
-.quiz h3 {
-
-font-size: 15px;
-
-line-height: 1.4;
-
-margin: 20px 0; }
-
-.respostas {
-
-display: flex;
-
-flex-direction: column;
-
-gap: 13px; }
-
-.resposta {
-
-background-color: transparent;
-
-border: none;
-
-text-align: left;
-
-font-size: 14px;
-
-padding: 5px;
-
-cursor: pointer; }
-
-.resposta:hover {
-
-color: var(--rosa-escuro); }
-
-/* RESULTADO */
-
-.resultado {
-
-display: none;
-
-text-align: center;
-
-font-family: Arial, sans-serif;
-
-padding: 35px 15px; }
-
-.resultado h3 {
-
-font-size: 15px;
-
-margin-bottom: 12px; }
-
-.resultado h2 {
-
-color: var(--rosa-escuro);
-
-font-size: 23px;
-
-font-weight: bold;
-
-margin: 12px 0; }
-
-.resultado p {
-
-font-size: 14px;
-
-line-height: 1.5; }
-
-/* CARD DOS PERFIS */
-
-.lista-perfis {
-
-height: 245px;
-
-display: flex;
-
-flex-direction: column;
-
-justify-content: center;
-
-gap: 17px; }
-
-.perfil-card {
-
-text-align: left;
-
-padding: 0 3px; }
-
-.perfil-card h3 {
-
-color: var(--rosa-escuro);
-
-font-family: Arial, sans-serif;
-
-font-size: 14px;
-
-font-weight: bold;
-
-margin: 0 0 5px; }
-
-.perfil-card p {
-
-font-family: Arial, sans-serif;
-
-font-size: 12px;
-
-line-height: 1.4;
-
-margin: 0; }
-
-/* LIVRO */
-
-.livro {
-
-height: 235px;
-
-display: flex;
-
-flex-direction: column;
-
-align-items: center;
-
-justify-content: center; }
-
-.livro img {
-
-width: 105px;
-
-height: 150px;
-
-object-fit: cover;
-
-border-radius: 2px; }
-
-#nome-livro {
-
-font-family: Arial, sans-serif;
-
-font-size: 14px;
-
-margin: 9px 0 3px;
-
-font-weight: bold; }
-
-#autor-livro {
-
-font-family: Arial, sans-serif;
-
-font-size: 12px;
-
-margin: 0; }
-
-/* BOTÃO SORTEAR */
-
-.sortear {
-
-display: none;
-
-margin: 0 auto;
-
-font-family: Arial, sans-serif;
-
-font-size: 12px;
-
-padding: 9px 20px;
-
-background-color: var(--rosa);
-
-color: black;
-
-border: none;
-
-border-radius: 12px;
-
-cursor: pointer; }
-
-.sortear:hover {
-
-background-color: var(--rosa-escuro); }
-
-/* RODAPÉ */
-
-.rodape {
-
-width: 100%;
-
-height: 30px;
-
-background-color: var(--rosa);
-
-flex-shrink: 0; }
-
-/* TABLET / CELULAR */
-
-@media screen and (max-width: 900px) {
-
-.cards-principais {
-
-flex-direction: column;
-
-align-items: center; }
-
-.questionario, .perfis, .livro-sugerido {
-
-width: 90%;
-
-max-width: 430px; }
-
-}
-
-@media screen and (max-width: 450px) {
-
-.cabecalho h1 {
-
-font-size: 25px; }
-
-.introducao {
-
-padding: 20px 18px; }
-
-.introducao h2 {
-
-font-size: 19px; }
-
-.questionario, .perfis, .livro-sugerido {
-
-height: 300px; }
-
-}
+</html>
