@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Destino literário</title>
+    <title>Destino Literário</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
@@ -13,79 +13,166 @@
 <body>
 
     <header class="cabecalho">
-        <h1>Destino literário</h1>
+        <h1>Destino Literário</h1>
     </header>
 
 
     <main class="conteudo">
 
-        <section class="questionario">
+        <!-- INTRODUÇÃO DO SITE -->
 
-            <h2>Questionário</h2>
+        <section class="introducao">
 
-            <div class="inicio" id="inicio">
+            <h2>Bem-vindo ao Destino Literário!</h2>
 
-                <button id="iniciar">
-                    INICIAR
-                </button>
+            <p>
+                Descubra qual tipo de leitor combina mais com você!
+                Responda ao nosso questionário e descubra se seu perfil
+                literário é romântico, aventureiro ou misterioso.
+            </p>
 
-            </div>
+            <p>
+                Depois, você ainda poderá descobrir livros que combinam
+                com o seu estilo de leitura.
+            </p>
+
+        </section>
 
 
-            <div class="quiz" id="quiz">
+        <!-- TIPOS DE LEITORES -->
 
-                <h3 id="numero-pergunta">
-                    1. Pergunta...
-                </h3>
+        <section class="tipos-leitores">
 
-                <div class="respostas">
+            <h2>Conheça os tipos de leitores</h2>
 
-                    <button class="resposta"></button>
+            <div class="cards-perfis">
 
-                    <button class="resposta"></button>
+                <div class="card-perfil">
 
-                    <button class="resposta"></button>
+                    <div class="icone-perfil">♡</div>
+
+                    <h3>Leitor Romântico</h3>
+
+                    <p>
+                        Para quem gosta de histórias cheias de sentimentos,
+                        relacionamentos e romances que fazem o coração bater
+                        mais forte.
+                    </p>
 
                 </div>
 
-            </div>
+
+                <div class="card-perfil">
+
+                    <div class="icone-perfil">✦</div>
+
+                    <h3>Leitor Aventureiro</h3>
+
+                    <p>
+                        Para quem ama explorar mundos fantásticos, viver
+                        grandes aventuras e acompanhar personagens enfrentando
+                        desafios incríveis.
+                    </p>
+
+                </div>
 
 
-            <div class="resultado" id="resultado">
+                <div class="card-perfil">
 
-                <h3>Seu perfil é:</h3>
+                    <div class="icone-perfil">⌕</div>
 
-                <h2 id="perfil"></h2>
+                    <h3>Leitor Misterioso</h3>
 
-                <p id="descricao-perfil"></p>
+                    <p>
+                        Para quem adora pistas, segredos, investigações e
+                        histórias cheias de reviravoltas surpreendentes.
+                    </p>
+
+                </div>
 
             </div>
 
         </section>
 
 
-        <section class="livro-sugerido">
+        <!-- CARDS PRINCIPAIS -->
 
-            <h2>Livro sugerido</h2>
-
-            <div class="livro" id="livro">
-
-                <img
-                    id="capa-livro"
-                    src="livro5.jpg"
-                    alt="Capa do livro"
-                >
-
-                <h3 id="nome-livro"></h3>
-
-                <p id="autor-livro"></p>
-
-            </div>
+        <section class="cards-principais">
 
 
-            <button class="sortear" id="sortear">
-                SORTEAR LIVRO
-            </button>
+            <!-- QUESTIONÁRIO -->
+
+            <section class="questionario">
+
+                <h2>Questionário</h2>
+
+                <div class="inicio" id="inicio">
+
+                    <button id="iniciar">
+                        INICIAR
+                    </button>
+
+                </div>
+
+
+                <div class="quiz" id="quiz">
+
+                    <h3 id="numero-pergunta">
+                        1. Pergunta...
+                    </h3>
+
+                    <div class="respostas">
+
+                        <button class="resposta"></button>
+
+                        <button class="resposta"></button>
+
+                        <button class="resposta"></button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="resultado" id="resultado">
+
+                    <h3>Seu perfil é:</h3>
+
+                    <h2 id="perfil"></h2>
+
+                    <p id="descricao-perfil"></p>
+
+                </div>
+
+            </section>
+
+
+            <!-- LIVRO -->
+
+            <section class="livro-sugerido">
+
+                <h2>Livro sugerido</h2>
+
+                <div class="livro" id="livro">
+
+                    <img
+                        id="capa-livro"
+                        src="livro5.jpg"
+                        alt="Capa do livro"
+                    >
+
+                    <h3 id="nome-livro"></h3>
+
+                    <p id="autor-livro"></p>
+
+                </div>
+
+
+                <button class="sortear" id="sortear">
+                    SORTEAR LIVRO
+                </button>
+
+            </section>
 
         </section>
 
