@@ -1,3 +1,4 @@
+
 const botaoIniciar = document.querySelector('#iniciar');
 
 const inicio = document.querySelector('#inicio');
